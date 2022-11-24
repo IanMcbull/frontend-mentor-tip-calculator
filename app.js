@@ -16,15 +16,18 @@ function validateInput(){
     const numberOfPeople = parseInt(document.querySelector('#number-of-people').value);
     // checking whether the user has input the bill amount and number of people
     if(billAmount > 0 && numberOfPeople > 0){
-        document.querySelector('#number-of-people').classList.remove('input-error');
-        document.querySelector('#bill-amount').classList.remove('input-error');
+        if(document.querySelector('#number-of-people').classList.contains('input-error')){
+            document.querySelector('#number-of-people').classList.remove('input-error');
+        }
+        if(document.querySelector('#bill-amount').classList.contains('input-error')){
+            document.querySelector('#bill-amount').classList.remove('input-error');
+        }
         return true;
     } else {
         // This is a ternary operator
         // It's a shorthand for an if/else statement
         // "condition" ? "if true" : "if false"
         !billAmount > 0 ? document.querySelector('#bill-amount').classList.add('input-error') : document.querySelector('#bill-amount').classList.remove('input-error');
-        document.querySelector('#bill-amount').classList.remove('input-error');
         !numberOfPeople > 0 ? document.querySelector('#number-of-people').classList.add('input-error') : document.querySelector('#number-of-people').classList.remove('input-error');
         return false;
     }  
