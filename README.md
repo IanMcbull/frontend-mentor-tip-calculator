@@ -31,7 +31,7 @@ Users should be able to:
 ![Desktop View Active](./assets/active_desktop.png)
 
 ###Mobile View
-![Mobile View Active](./assets/mobile_view)
+![Mobile View Active](./assets/mobile_view.png)
 
 
 ### Links
